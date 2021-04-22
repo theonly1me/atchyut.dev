@@ -97,44 +97,42 @@ const Content = () => {
         </Typography>
       </Box>
       <Box>
-        <footer className={classes.footer}>
-          <Box maxWidth="100%">
-            <Typography align="center">
-              <IconButton
-                style={{ color: 'e4405f' }}
-                component={Link}
-                href="https://www.instagram.com/pulavarthi.preetham/"
-                target="_blank"
-              >
-                <InstagramIcon fontSize="large" style={{ color: 'e4405f' }} />
-              </IconButton>
-              <IconButton
-                style={{ color: 'inherit' }}
-                component={Link}
-                href="https://github.com/theonly1me"
-                target="_blank"
-              >
-                <GitHubIcon fontSize="large" />
-              </IconButton>
-              <IconButton
-                style={{ color: '55acee' }}
-                component={Link}
-                href="https://www.twitter.com/AtchyutPreetham"
-                target="_blank"
-              >
-                <TwitterIcon fontSize="large" style={{ color: '#55acee' }} />
-              </IconButton>
-              <IconButton
-                style={{ color: '#0077B5' }}
-                component={Link}
-                href="https://www.linkedin.com/in/atchyutpulavarthi/"
-                target="_blank"
-              >
-                <LinkedInIcon fontSize="large" style={{ color: '#0077B5' }} />
-              </IconButton>
-            </Typography>
-          </Box>
-        </footer>
+        <Box maxWidth="100%">
+          <Typography align="center">
+            <IconButton
+              style={{ color: 'e4405f' }}
+              component={Link}
+              href="https://www.instagram.com/pulavarthi.preetham/"
+              target="_blank"
+            >
+              <InstagramIcon fontSize="large" style={{ color: 'e4405f' }} />
+            </IconButton>
+            <IconButton
+              style={{ color: 'inherit' }}
+              component={Link}
+              href="https://github.com/theonly1me"
+              target="_blank"
+            >
+              <GitHubIcon fontSize="large" />
+            </IconButton>
+            <IconButton
+              style={{ color: '55acee' }}
+              component={Link}
+              href="https://www.twitter.com/AtchyutPreetham"
+              target="_blank"
+            >
+              <TwitterIcon fontSize="large" style={{ color: '#55acee' }} />
+            </IconButton>
+            <IconButton
+              style={{ color: '#0077B5' }}
+              component={Link}
+              href="https://www.linkedin.com/in/atchyutpulavarthi/"
+              target="_blank"
+            >
+              <LinkedInIcon fontSize="large" style={{ color: '#0077B5' }} />
+            </IconButton>
+          </Typography>
+        </Box>
       </Box>
     </Paper>
   );
