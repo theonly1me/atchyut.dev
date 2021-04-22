@@ -38,62 +38,42 @@ const Content = () => {
       </Box>
       <Box className={classes.contentTextCodeSnippet}>
         <Typography variant="body1" paragraph>
-          <pre>
-            {
-              <>
-                <code className="language-javascript">
-                  {//prettier-ignore
+          {
+            <>
+              {//prettier-ignore
             }
-                  <span className={classes.colorTextPurple}>const</span>{' '}
-                  <var>
-                    <span className={classes.colorText}>whatDefinesMe</span>
-                  </var>{' '}
-                  = [
-                  <span className={classes.colorTextString}>
-                    'Developer 💻'
-                  </span>
-                  , <span className={classes.colorTextString}>'Gamer 🎮'</span>,{' '}
-                  <span className={classes.colorTextString}>'Geek 🤓'</span>,{' '}
-                  <span className={classes.colorTextString}>
-                    'Family Man 👪'
-                  </span>
-                  ,{' '}
-                </code>
-                <br />
-                <code className="language-javascript">
-                  <span className={classes.colorTextString}>
-                    'Cyborg Ninja 🦾'
-                  </span>
-                  ,
-                  <span className={classes.colorTextString}>
-                    'Fitness Boi 🚵‍♂️'
-                  </span>
-                  ,
-                  <span className={classes.colorTextString}>
-                    'Traveller 🗺️'
-                  </span>
-                  , ...
-                  <span className={classes.colorText}>
-                    <var>lotsOfOtherThings</var>
-                  </span>
-                  ];
-                  {//prettier-ignore
+              <span className={classes.colorTextPurple}>const</span>{' '}
+              <var>
+                <span className={classes.colorText}>whatDefinesMe</span>
+              </var>{' '}
+              = [<span className={classes.colorTextString}>'Developer 💻'</span>
+              , <span className={classes.colorTextString}>'Gamer 🎮'</span>,{' '}
+              <span className={classes.colorTextString}>'Geek 🤓'</span>,{' '}
+              <span className={classes.colorTextString}>'Family Man 👪'</span>,{' '}
+              <br />
+              <span className={classes.colorTextString}>'Cyborg Ninja 🦾'</span>
+              ,<span className={classes.colorTextString}>'Fitness Boi 🚵‍♂️'</span>
+              ,<span className={classes.colorTextString}>'Traveller 🗺️'</span>,
+              ...
+              <span className={classes.colorText}>
+                <var>lotsOfOtherThings</var>
+              </span>
+              ];
+              {//prettier-ignore
             }
-                  <br/>
-                  <span className={classes.colorTextPurple}>const</span>{' '}
-                  <var>
-                    <span className={classes.colorText}>atchyut</span>
-                  </var>{' '}
-                  ={' '}
-                  <var>
-                    <span className={classes.colorText}>whatDefinesMe</span>
-                  </var>
-                  .<span className={classes.colorTextOrange}>reduce</span>((me,
-                  trait) => me + trait);
-                </code>
-              </>
-            }
-          </pre>
+              <br/>
+              <span className={classes.colorTextPurple}>const</span>{' '}
+              <var>
+                <span className={classes.colorText}>atchyut</span>
+              </var>{' '}
+              ={' '}
+              <var>
+                <span className={classes.colorText}>whatDefinesMe</span>
+              </var>
+              .<span className={classes.colorTextOrange}>reduce</span>((me,
+              trait) => me + trait);
+            </>
+          }
         </Typography>
       </Box>
       <Box>
