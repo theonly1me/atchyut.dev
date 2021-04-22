@@ -6,7 +6,6 @@ import {
   IconButton,
   Divider,
   Box,
-  useTheme,
 } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -23,7 +22,6 @@ const Header = () => {
   const dispatch = useDispatch();
   const darkMode = useSelector(darkModeActive);
   const classes = useStyles();
-  const theme = useTheme();
 
   const themeIcon = () => {
     return darkMode ? (
