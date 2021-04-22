@@ -22,7 +22,7 @@ const Content = () => {
         <Avatar
           alt="Atchyut Preetham Pulavarthi"
           src="/assets/atchyut.jpg"
-          className={classes.avatar}
+          style={{ width: '200px', height: '200px' }}
         />
       </Box>
       <Box className={classes.contentTextHead}>

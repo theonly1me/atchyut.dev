@@ -43,10 +43,6 @@ const useStyles = makeStyles(theme =>
       flexDirection: 'column',
       flexWrap: 'wrap',
     },
-    avatar: {
-      width: 300,
-      height: 300,
-    },
     avatarContainer: {
       display: 'flex',
       justifyContent: 'center',
