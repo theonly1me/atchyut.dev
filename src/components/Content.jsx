@@ -98,7 +98,7 @@ const Content = () => {
       </Box>
       <Box>
         <footer className={classes.footer}>
-          <Container maxWidth="lg">
+          <Box maxWidth="100%">
             <Typography align="center">
               <IconButton
                 style={{ color: 'e4405f' }}
@@ -133,7 +133,7 @@ const Content = () => {
                 <LinkedInIcon fontSize="large" style={{ color: '#0077B5' }} />
               </IconButton>
             </Typography>
-          </Container>
+          </Box>
         </footer>
       </Box>
     </Paper>
