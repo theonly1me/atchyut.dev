@@ -17,7 +17,7 @@ import useStyles from '../utils/styles';
 const Content = () => {
   const classes = useStyles();
   return (
-    <Paper className={classes.contentContainer}>
+    <Paper elevation={5} className={classes.contentContainer}>
       <Box className={classes.avatarContainer}>
         <Avatar
           alt="Atchyut Preetham Pulavarthi"
@@ -69,7 +69,7 @@ const Content = () => {
             <span className={classes.colorText}>whatDefinesMe</span>
           </var>
           .<span className={classes.colorTextOrange}>reduce</span>((me, trait)
-          => me + trait);
+          => me + trait, ' ');
         </Typography>
       </Box>
       <Box>

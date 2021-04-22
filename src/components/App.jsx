@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Paper className={classes.appContainerPaper}>
+      <Paper elevation={0} className={classes.appContainerPaper}>
         <Header />
         <Container className={classes.appBodyContainer}>
           <Content />
