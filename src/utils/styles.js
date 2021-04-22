@@ -44,8 +44,8 @@ const useStyles = makeStyles(theme =>
       flexWrap: 'wrap',
     },
     avatar: {
-      width: theme.spacing(20),
-      height: theme.spacing(20),
+      width: 300,
+      height: 300,
     },
     avatarContainer: {
       display: 'flex',
