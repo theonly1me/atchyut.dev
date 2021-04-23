@@ -89,8 +89,8 @@ const Content = () => {
           <var>
             <span className={classes.colorText}>myHobbies</span>
           </var>
-          .<span className={classes.colorTextOrange}>reduce</span>((me, hobby)
-          => me + hobby, ' ');
+          .<span className={classes.colorTextOrange}>reduce</span>((me, hobby) =
+          {'>'} me + hobby, ' ');
         </Typography>
       </Box>
       <Box>
