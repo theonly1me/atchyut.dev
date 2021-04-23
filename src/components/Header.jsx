@@ -5,7 +5,7 @@ import {
   Typography,
   IconButton,
   Divider,
-  Box,
+  Slide,
 } from '@material-ui/core';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -32,26 +32,35 @@ const Header = () => {
   };
 
   return (
-    <Box>
-      <AppBar color="primary" className={classes.header}>
-        <Toolbar variant="dense">
-          <Typography className={classes.headerTitle}>atchyut.dev</Typography>
-          <Divider
-            orientation="vertical"
-            flexItem
-            style={{ backgroundColor: '#636e72' }}
-          />
+    <>
+      <Slide
+        direction="down"
+        in={true}
+        appear={true}
+        mountOnEnter
+        unmountOnExit
+        timeout={1000}
+      >
+        <AppBar color="primary" className={classes.header}>
+          <Toolbar variant="dense">
+            <Typography className={classes.headerTitle}>atchyut.dev</Typography>
+            <Divider
+              orientation="vertical"
+              flexItem
+              style={{ backgroundColor: '#636e72' }}
+            />
 
-          <IconButton
-            onClick={() => dispatch(toggleDarkMode(!darkMode))}
-            className={classes.headerDarkModeButton}
-            edge="end"
-          >
-            {themeIcon()}
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-    </Box>
+            <IconButton
+              onClick={() => dispatch(toggleDarkMode(!darkMode))}
+              className={classes.headerDarkModeButton}
+              edge="end"
+            >
+              {themeIcon()}
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </Slide>
+    </>
   );
 };
 

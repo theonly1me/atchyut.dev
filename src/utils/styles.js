@@ -37,8 +37,8 @@ const useStyles = makeStyles(theme =>
       marginRight: 50,
     },
     contentContainer: {
-      minWidth: '50%',
-      padding: 10,
+      minWidth: '70%',
+      padding: 50,
       display: 'flex',
       flexDirection: 'column',
       flexWrap: 'wrap',
@@ -58,6 +58,12 @@ const useStyles = makeStyles(theme =>
       fontWeight: '200',
       display: 'flex',
       justifyContent: 'center',
+      maxWidth: '80%',
+      alignItems: 'center',
+      textAlign: 'center',
+
+      alignSelf: 'center',
+      flexWrap: 'wrap',
     },
     contentTextCodeSnippet: {
       fontFamily: 'Montserrat, sans-serif;',
@@ -79,7 +85,7 @@ const useStyles = makeStyles(theme =>
     },
     footer: {
       backgroundColor: theme.palette.background.paper,
-      padding: theme.spacing(6, 0),
+      padding: theme.spacing(4, 0),
       marginTop: 10,
     },
   })

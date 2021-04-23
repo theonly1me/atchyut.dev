@@ -19,7 +19,7 @@ import useStyles from '../utils/styles';
 
 const App = () => {
   const dispatch = useDispatch();
-  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark');
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
   useEffect(() => {
     dispatch(toggleDarkMode(prefersDarkMode));
