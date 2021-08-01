@@ -23,7 +23,14 @@ const Header = () => (
   <Container>
     <Div1>
       <Link href="/">
-        <a style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
+        <a
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            color: 'white',
+            marginBottom: '20px',
+          }}
+        >
           <BiCodeBlock size="3rem" style={{ marginRight: '.5rem' }} />{' '}
           <Span>atchyut.dev</Span>
         </a>
@@ -37,14 +44,14 @@ const Header = () => (
       </li>
       <li>
         <Link href="#tech">
-          <NavLink>Technologies</NavLink>
+          <NavLink>Technical Skill-tree</NavLink>
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="#about">
           <NavLink>About</NavLink>
         </Link>
-      </li>
+      </li> */}
     </Div2>
     <Div3>
       <SocialIcons href="https://github.com/theonly1me" target="_blank">
