@@ -17,8 +17,8 @@ const Hero = props => (
       <SectionText>
         A result-oriented software developer with varied experience in building
         Cloud-first applications and the goal to become a language and framework
-        agnostic technical expert carrying a zeal optimize anything to it's best
-        possible runtime.
+        agnostic technical expert carrying a zeal to optimize anything to it's
+        best possible runtime.
       </SectionText>
       <Button
         onClick={() =>
