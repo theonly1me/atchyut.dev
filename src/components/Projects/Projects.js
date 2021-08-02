@@ -27,9 +27,9 @@ const Projects = () => (
     <SectionDivider />
     <SectionTitle main>Side Projects</SectionTitle>
     <SectionText>
-      Aside from the robust & cloud-ready enterprise apps and microservives I
-      build at work, I take pleasuring in learning and working with a multitude
-      of different technologies in my freetime.
+      Aside from the robust & cloud-ready enterprise apps and microservices I
+      build at work, I take pleasure in learning and working with a multitude of
+      technologies in my freetime.
       <br />
       <br />
       Here are some of the fun projects I've built in the process! 🧛🏼 You can
