@@ -12,7 +12,7 @@ const Hero = props => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Hi there, I'm Atchyut. 👋
+        Hi there, I'm Atchyut. ✨
       </SectionTitle>
       <SectionText>
         A result-oriented software developer with varied experience in building
