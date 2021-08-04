@@ -6,14 +6,13 @@ import {
   SectionTitle,
 } from '../../styles/GlobalComponents';
 import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
+import { LeftSection, HeroIcon } from './HeroStyles';
 
 const Hero = props => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Hi there, I'm Atchyut!{' '}
-        <img style={{ maxWidth: 100 }} src="./images/hello.png" />
+        Hi there, I'm Atchyut! <HeroIcon src="./images/hello.png" />
       </SectionTitle>
       <SectionText>
         A result-oriented software developer with varied experience in building
