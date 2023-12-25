@@ -29,6 +29,7 @@ const Link: React.FC<{
       >
         <Image
           src={image}
+          loading="eager"
           alt={`${text} logo`}
           className="my-auto mx-auto max-w-52 max-h-42"
         />

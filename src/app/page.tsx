@@ -10,7 +10,7 @@ import {
   FaLinkedin,
 } from 'react-icons/fa6';
 import { GrBlog } from 'react-icons/gr';
-import atchyut from '../../public/atchyut.jpg';
+// import atchyut from '../../public/atchyut.jpg';
 import genpact from '../../public/genpact.png';
 import postman from '../../public/postman.png';
 import auditLogs from '../../public/audit-logs.jpg';
@@ -21,6 +21,7 @@ import godfather from '../../public/godfather.webp';
 
 import Button from './button';
 import Link from './link';
+import Carousel from './carousel';
 
 export default function Home() {
   return (
@@ -32,8 +33,8 @@ export default function Home() {
       </Head>
       <main className="bg-white px-10">
         <section className="min-h-screen">
-          <nav className="py-10 mb-10 flex justify-between items-center">
-            <h1 className="text-xl text-black border-b-2 border-white hover:border-black cursor-pointer transition-all duration-200">
+          <nav className="py-10 mb-10 flex flex-col justify-between items-center md:flex-row">
+            <h1 className="text-xl text-black border-b-2 border-white hover:border-black cursor-pointer transition-all duration-200 mb-4 md:mb-2">
               atchyut.dev
             </h1>
             <ul className="flex items-center gap-2">
@@ -58,20 +59,26 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col items-center gap-y-12">
-            <div className="relative rounded-3xl w-60 h-60 mt-20 overflow-hidden pointer-events-none border-4">
-              <Image
-                src={atchyut}
-                alt="Atchyut"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
+            {/* <div className="flex flex-col items-center">
+              <div className="relative rounded-3xl w-60 h-60 mt-20 overflow-hidden pointer-events-none border-4">
+                <Image
+                  src={atchyut}
+                  alt="Picture of Atchyut at Etersheim, North Holland, Netherlands"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <span className="text-neutral-400 text-md max-w-60 text-center">
+                Picture from Etersheim, North Holland, Netherlands.
+              </span>
+            </div> */}
+            <Carousel />
             <div className="p-10 font-normal">
               <h2 className="text-5xl text-neutral-900 font-bold  py-2 ">
                 Hey there, I&apos;m Atchyut
                 <span className="text-purple-400">.</span>
               </h2>
-              <h3 className="text-2xl py-2 text-neutral-800 max-w-3xl">
+              <h3 className="text-xl py-2 text-neutral-800 max-w-3xl">
                 A fullstack software engineer with over{' '}
                 {new Date().getFullYear() - 2017} years of experience building
                 cloud-ready, scalable software systems.
@@ -172,6 +179,7 @@ export default function Home() {
                 . You can also reach out to me on any of the social media
                 platforms listed below.
               </p>
+              s caC
             </div>
           </div>
         </section>
