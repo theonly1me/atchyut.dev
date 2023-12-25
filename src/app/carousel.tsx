@@ -16,17 +16,14 @@ const subtexts = [
 ];
 
 const Carousel: React.FC = () => {
-  const [hasLoaded, setHasLoaded] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
 
   const nextImage = () => {
     setCurrentImage(prev => (prev + 1) % images.length);
-    setHasLoaded(false);
   };
 
   const prevImage = () => {
     setCurrentImage(prev => (prev - 1 + images.length) % images.length);
-    setHasLoaded(false);
   };
 
   return (
@@ -46,7 +43,6 @@ const Carousel: React.FC = () => {
             objectFit="cover"
             loading="eager"
             className="pointer-events-none"
-            onLoad={() => setHasLoaded(true)}
           />
           <FaArrowCircleLeft
             onClick={prevImage}
