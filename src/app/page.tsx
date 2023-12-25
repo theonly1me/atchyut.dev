@@ -10,7 +10,6 @@ import {
   FaLinkedin,
 } from 'react-icons/fa6';
 import { GrBlog } from 'react-icons/gr';
-// import atchyut from '../../public/atchyut.jpg';
 import genpact from '../../public/genpact.png';
 import postman from '../../public/postman.png';
 import auditLogs from '../../public/audit-logs.jpg';
@@ -37,7 +36,7 @@ export default function Home() {
             <h1 className="text-xl text-black border-b-2 border-white hover:border-black cursor-pointer transition-all duration-200 mb-4 md:mb-2">
               atchyut.dev
             </h1>
-            <ul className="flex items-center gap-2">
+            <ul className="flex flex-col items-center gap-2 md:flex-row">
               <li>
                 <Button
                   headingOffset="15%"
@@ -59,19 +58,6 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col items-center gap-y-12">
-            {/* <div className="flex flex-col items-center">
-              <div className="relative rounded-3xl w-60 h-60 mt-20 overflow-hidden pointer-events-none border-4">
-                <Image
-                  src={atchyut}
-                  alt="Picture of Atchyut at Etersheim, North Holland, Netherlands"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <span className="text-neutral-400 text-md max-w-60 text-center">
-                Picture from Etersheim, North Holland, Netherlands.
-              </span>
-            </div> */}
             <Carousel />
             <div className="p-10 font-normal">
               <h2 className="text-5xl text-neutral-900 font-bold  py-2 ">
