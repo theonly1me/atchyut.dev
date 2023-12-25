@@ -42,6 +42,8 @@ const Carousel: React.FC = () => {
             layout="fill"
             objectFit="cover"
             loading="eager"
+            fetchPriority="high"
+            placeholder="blur"
             className="pointer-events-none"
           />
           <FaArrowCircleLeft
