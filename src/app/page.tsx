@@ -104,7 +104,7 @@ export default function Home() {
               .
             </p>
           </div>
-          <div className="text-5xl mx-9 mt-15 flex gap-16 py-3">
+          <div className="text-5xl mx-9 mt-15 grid grid-cols-2 md:flex md:gap-16 py-5 justify-center mx-32">
             <a
               href="https://linkedin.com/in/atchyutpulavarthi"
               target="_blank"
