@@ -6,21 +6,22 @@ import { IconType } from 'react-icons';
 const Button: React.FC<{
   href?: string;
   heading: string;
+  headingOffset: string;
   subheading?: string;
   children?: ReactNode;
-}> = ({ href, heading, subheading, children }) => {
+}> = ({ href, heading, subheading, children, headingOffset }) => {
   return (
     <motion.a
       initial="initial"
       whileHover="whileHover"
       href={href}
       target="_blank"
-      className={`text-white group relative overflow-x-hidden flex items-center  gap-2 justify-end transition-colors duration-300 bg-neutral-950 px-4 py-2.5 mx-auto my-auto rounded-xl border-2 border-purple-50 hover:border-purple-200`}
+      className={`text-white group relative overflow-x-hidden flex items-center  gap-2 justify-end transition-colors duration-300 bg-neutral-950 px-4 py-2.5 mx-auto my-auto rounded-xl border-2 border-neutral-50 hover:border-neutral-200`}
     >
       <motion.div
         variants={{
           initial: {
-            x: '20%',
+            x: headingOffset,
             opacity: 1,
           },
           whileHover: {
@@ -34,12 +35,12 @@ const Button: React.FC<{
         }}
       >
         <span
-          className={`text-sm text-purple-50 transition-colors duration-300 md:text-md group-hover:text-purple-300`}
+          className={`text-sm text-neutral-50 transition-colors duration-300 md:text-md group-hover:text-neutral-300`}
         >
           {heading}
         </span>
         {subheading && (
-          <span className="mt-2 text-purple-50 transition-colors duration-300 group-hover:text-purple-200">
+          <span className="mt-2 text-neutral-50 transition-colors duration-300 group-hover:text-neutral-200">
             {subheading}
           </span>
         )}

@@ -17,9 +17,9 @@ const Tooltip: React.FC<{
     boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
   };
 
-  if (placement === 'top') {
+  if (placement === 'bottom') {
     style.top = '100%';
-  } else if (placement === 'bottom') {
+  } else if (placement === 'top') {
     style.bottom = '100%';
   }
 
