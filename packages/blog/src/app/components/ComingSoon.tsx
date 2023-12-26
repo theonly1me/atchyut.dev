@@ -3,7 +3,7 @@ import soon from '../../../public/coming_soon.jpg';
 
 const ComingSoon = () => {
   return (
-    <div className="border rounded-lg max-w-5xl md:h-96">
+    <div className="border rounded-lg max-w-5xl md:h-96 mt-9">
       <div className="flex font-sans">
         <div className="flex-none md:w-96 md:h-96 relative">
           <Image
