@@ -1,7 +1,5 @@
-import React, { useState, useRef, ReactNode } from 'react';
-import { FaArrowRight } from 'react-icons/fa6';
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
-import { IconType } from 'react-icons';
 
 const Button: React.FC<{
   href?: string;

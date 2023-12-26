@@ -9,16 +9,16 @@
     "packages/*"
   ],
   "scripts": {
-    "web": "yarn workspace portfolio dev",
-    "web:build": "yarn workspace portfolio build",
-    "web:start": "yarn workspace portfolio start",
-    "web:lint": "yarn workspace portfolio lint",
-    "web:test": "yarn workspace portfolio test",
-    "blog": "yarn workspace blog dev",
-    "blog:build": "yarn workspace blog build",
-    "blog:start": "yarn workspace blog start",
-    "blog:lint": "yarn workspace blog lint",
-    "blog:test": "yarn workspace blog test",
+    "web": "yarn workspace @atchyut.dev/portfolio dev",
+    "web:build": "yarn workspace @atchyut.dev/portfolio build",
+    "web:start": "yarn workspace @atchyut.dev/portfolio start",
+    "web:lint": "yarn workspace @atchyut.dev/portfolio lint",
+    "web:test": "yarn workspace @atchyut.dev/portfolio test",
+    "blog": "yarn workspace @atchyut.dev/blog dev",
+    "blog:build": "yarn workspace @atchyut.dev/blog build",
+    "blog:start": "yarn workspace @atchyut.dev/blog start",
+    "blog:lint": "yarn workspace @atchyut.dev/blog lint",
+    "blog:test": "yarn workspace @atchyut.dev/blog test",
     "clean": "rm -rf node_modules"
   },
   "devDependencies": {

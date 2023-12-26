@@ -1,7 +1,8 @@
 {
-  "name": "portfolio",
+  "name": "@atchyut.dev/portfolio",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/index.ts",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

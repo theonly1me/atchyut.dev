@@ -2,10 +2,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
-import atchyut_1 from '../../public/atchyut_1.jpg';
-import atchyut_2 from '../../public/atchyut_2.jpg';
-import atchyut_3 from '../../public/atchyut_3.jpg';
-import atchyut_4 from '../../public/atchyut_4.png';
+import atchyut_1 from '../../../public/atchyut_1.jpg';
+import atchyut_2 from '../../../public/atchyut_2.jpg';
+import atchyut_3 from '../../../public/atchyut_3.jpg';
+import atchyut_4 from '../../../public/atchyut_4.png';
 
 const images = [atchyut_1, atchyut_2, atchyut_3, atchyut_4];
 const subtexts = [
