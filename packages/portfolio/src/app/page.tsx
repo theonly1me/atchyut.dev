@@ -69,7 +69,7 @@ export default function Home() {
                 {new Date().getFullYear() - 2017} years of experience building
                 cloud-ready, scalable software systems.
               </h3>
-              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md text-justify py-3 leading-8 text-neutral-700 max-w-4xl">
                 I currently work at{' '}
                 <Link
                   image={postman}
@@ -101,7 +101,7 @@ export default function Home() {
                 closely with several Postman Enterprise customers to enhance our
                 features that enable them to secure their API workflows.
               </p>
-              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 text-justify leading-8 text-neutral-700 max-w-4xl">
                 Prior to that, up until July 2022, I was employed at{' '}
                 <Link
                   text="SAP"
@@ -123,7 +123,7 @@ export default function Home() {
                 with several customers to unblock them when they experienced
                 issues with APM&apos;s predecessor, Performance Asset Insights.
               </p>
-              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 leading-8 text-justify text-neutral-700 max-w-4xl">
                 Going back to the beginning, I embarked on my coding journey
                 back in 2014, when I was still in college, it all started with
                 Python and JavaScript, but I&apos;ve worked with a multitude of
@@ -138,7 +138,7 @@ export default function Home() {
                 Fortune 500 clients in building their products using various
                 technologies.
               </p>
-              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 leading-8 text-justify text-neutral-700 max-w-4xl">
                 Apart from this, I&apos;m a father and also a dog father (yes,
                 you read it right... I didn&apos;t mistype{' '}
                 <Link

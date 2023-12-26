@@ -20,5 +20,8 @@
     "blog:lint": "yarn workspace blog lint",
     "blog:test": "yarn workspace blog test",
     "clean": "rm -rf node_modules"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.10.1"
   }
 }

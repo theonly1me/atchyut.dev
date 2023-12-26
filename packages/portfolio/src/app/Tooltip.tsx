@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 const Tooltip: React.FC<{
@@ -28,7 +28,7 @@ const Tooltip: React.FC<{
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
       transition={{ duration: 0.3 }}
-      className={`absolute z-50 left-1/2 p-2 bg-white rounded ${className}`}
+      className={`absolute z-50 left-1/2 p-2 bg-white rounded hidden sm:block ${className}`}
       style={style}
     >
       {children}
