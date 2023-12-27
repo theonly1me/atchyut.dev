@@ -23,7 +23,7 @@ const Link: React.FC<{
       <Tooltip
         isVisible={isTooltipVisible}
         className={`max-w-62 max-h-42 ${
-          isTooltipVisible ? 'block absolute z-50' : 'hidden'
+          isTooltipVisible ? 'sm:block sm:absolute sm:z-50' : ''
         }`}
         placement={tooltipPlacement}
       >
