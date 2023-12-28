@@ -1,26 +1,13 @@
 'use client';
-import React, { useState, useEffect, ReactElement } from 'react';
+import React from 'react';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import _ from 'lodash';
-import { Page } from '@/types';
 import Blog from '@/app/components/Blog';
 import { TiArrowBack } from 'react-icons/ti';
 import Link from 'next/link';
 
 export default function Home() {
-  const elements: ReactElement[] = [];
-  const [blogs, setBlogs] = useState<Page[]>();
-  const [page, setPage] = useState<ReactElement[]>(elements);
-
-  useEffect(() => {
-    fetch('/api/fetchBlogs')
-      .then(res => res.json())
-      .then((d: Page[]) => {
-        setBlogs(d);
-      });
-  }, []);
-
   return (
     <div className="bg-white">
       <main className="bg-white px-10">
