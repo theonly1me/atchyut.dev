@@ -1,29 +1,39 @@
+import { Page } from '../../types';
 import Image from 'next/image';
+import imageLoader from '../../../imageLoader';
+import { useRouter } from 'next/navigation';
 
-const Card = () => {
+const Card: React.FC<Page> = ({ pageName, pageId, imageUrl, pageSummary }) => {
+  const router = useRouter();
   return (
-    <div className="max-w-xl border rounded-lg max-h-72 hover:translate-y-1 hover:scale-105 active:-translate-y-1 active:scale-95 transition-transform duration-300">
-      <div className="flex font-sans">
-        <div className="flex-none w-48 relative">
+    <div
+      onClick={() => {
+        router.push(`/blogpost/${pageId}`);
+      }}
+      className="border w-xs rounded-lg h-40 hover:translate-y-1 hover:scale-105 active:-translate-y-0 active:scale-100 transition-transform duration-300 cursor-pointer"
+    >
+      <div className="flex">
+        <div className="relative w-48">
           <Image
-            src="https://images.unsplash.com/photo-1701854315034-eb81a6127064?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTcwMzYyODA5NA&ixlib=rb-4.0.3&q=80&w=1080"
+            src={imageUrl}
             layout="fill"
             objectFit="cover"
-            alt="image"
-            className="absolute inset-0 w-full h-full object-cover rounded-l-lg"
-            // placeholder="blur"
+            alt={`Cover image for ${pageName}`}
+            className="absolute object-cover rounded-l-lg"
+            placeholder="blur"
+            blurDataURL={imageUrl}
+            loader={imageLoader}
+            quality={75}
           />
         </div>
-        <div className="flex-auto p-6">
+        <div className="flex-auto px-4 py-4 flex-wrap max-w-xs h-40 ">
           <div className="flex flex-wrap">
-            <h3 className="flex-auto text-lg font-semibold text-slate-900">
-              First Blog
+            <h3 className="flex-auto text-lg font-semibold text-neutral-700">
+              {pageName}
             </h3>
           </div>
-          <div className="flex items-baseline mt-4 mb-4 p-4 border-t border-slate-200 text-black">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum ex
-            perspiciatis eos aliquam suscipit tempora eveniet repellat corrupti
-            nemo tenetur modi beatae fugiat dolorum mollitia amet, esse...
+          <div className="flex items-baseline mt-4 mb-4 py-4 border-t border-slate-200 text-neutral-600">
+            {pageSummary}
           </div>
         </div>
       </div>

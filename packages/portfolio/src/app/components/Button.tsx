@@ -14,7 +14,7 @@ const Button: React.FC<{
       whileHover="whileHover"
       href={href}
       target="_blank"
-      className={`text-white group relative overflow-x-hidden flex items-center  gap-2 justify-end transition-colors duration-300 bg-neutral-950 px-4 py-2.5 mx-auto my-auto rounded-xl border-2 border-neutral-50 hover:border-neutral-200`}
+      className={`text-white w-48 group relative overflow-x-hidden flex items-center  gap-2 justify-end transition-colors duration-300 bg-neutral-950 px-4 py-2.5 mx-auto my-auto rounded-xl border-2 border-neutral-50 hover:border-neutral-200`}
     >
       <motion.div
         variants={{

@@ -1,4 +1,4 @@
-export default function myImageLoader({
+export default function imageLoader({
   src,
   width,
   quality,
@@ -7,5 +7,5 @@ export default function myImageLoader({
   width: string;
   quality: string;
 }) {
-  return `https://source.unsplash.com/random`;
+  return `${src}?w=${width}&q=${quality || 75}`;
 }

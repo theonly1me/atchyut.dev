@@ -9,13 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/functions": "^2.4.1",
+    "@notionhq/client": "^2.2.14",
     "framer-motion": "^10.16.16",
+    "lodash": "^4.17.21",
     "next": "14.0.4",
+    "notion-jsx": "^1.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
