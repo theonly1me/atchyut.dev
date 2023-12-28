@@ -19,7 +19,7 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
   }
 
   return (
-    <nav className="py-10 mb-10 flex flex-col justify-between items-center">
+    <nav className="py-10 flex flex-col justify-between items-center">
       <h1 className="text-xl text-black border-b-2 border-white hover:border-black hover:from-purple-400 hover:to-pink-600 bg-gradient-to-r bg-clip-text hover:text-transparent cursor-pointer transition-all duration-200 mb-4 md:mb-2">
         atchyut.dev
       </h1>

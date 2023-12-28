@@ -19,10 +19,10 @@ export default function Home() {
       <main className="bg-white px-10">
         <section className="min-h-screen">
           <Navbar origin="home" />
-          <div className="flex flex-col items-center gap-y-12">
+          <div className="flex flex-col items-center gap-y-4">
             <Carousel />
             <div className="p-10 font-normal">
-              <h2 className="text-4xl md:text-5xl text-neutral-900 font-bold  py-2 ">
+              <h2 className="text-4xl md:text-5xl text-neutral-900 font-bold  pb-2 ">
                 Hey there <span className="wave">👋🏼</span>, I&apos;m{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                   Atchyut
