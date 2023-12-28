@@ -35,7 +35,7 @@ __metadata:
     framer-motion: "npm:^10.16.16"
     lodash: "npm:^4.17.21"
     next: "npm:14.0.4"
-    notion-jsx: "npm:^1.0.0"
+    notion-jsx: "npm:^1.0.1"
     postcss: "npm:^8"
     react: "npm:^18"
     react-dom: "npm:^18"
@@ -10166,9 +10166,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"notion-jsx@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "notion-jsx@npm:1.0.0"
+"notion-jsx@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "notion-jsx@npm:1.0.1"
   dependencies:
     "@notionhq/client": "npm:^2.2.14"
     lodash: "npm:^4.17.21"
@@ -10178,7 +10178,7 @@ __metadata:
     tailwindcss: "npm:^3.4.0"
     typescript: "npm:^5.3.3"
     uuid: "npm:^9.0.1"
-  checksum: 76b1f5a4c436322bf7d4edc525886f5b06f1afb631dd874d4723d3626b4e643cfc6dfea3de91ad442990e8a5dcd180e45856edcc5c51a7c12d5c830eaa480676
+  checksum: df23bef1b464badd39793a71ba4ba5cb42a61f776458118948710ad410bc35b4171e69db16305ab38f71a7b1098040435b787f6bf1051ae553e049ab6a46408f
   languageName: node
   linkType: hard
 

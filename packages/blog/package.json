@@ -14,7 +14,7 @@
     "framer-motion": "^10.16.16",
     "lodash": "^4.17.21",
     "next": "14.0.4",
-    "notion-jsx": "^1.0.0",
+    "notion-jsx": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0"
