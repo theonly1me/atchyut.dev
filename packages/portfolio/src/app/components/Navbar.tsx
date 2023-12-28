@@ -11,7 +11,7 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
 
   if (origin === 'home') {
     isSecondaryBtnBlog = true;
-    secondaryBtnHeading = 'Read My Blog';
+    secondaryBtnHeading = 'Checkout My Blog';
     secondaryBtnHref = 'https://blog.atchyut.dev';
   } else {
     secondaryBtnHeading = 'Visit Homepage';

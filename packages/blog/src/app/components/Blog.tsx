@@ -18,7 +18,7 @@ const Blog = () => {
           setBlocks(notionJSX.generateJSX(d) as ReactElement[]);
         }
       });
-  }, []);
+  }, [pageId]);
 
   if (!blocks || !blocks.length) {
     return (
