@@ -27,7 +27,7 @@ const Card: React.FC<Page> = ({ pageName, pageId, imageUrl, pageSummary }) => {
       <div className="p-4">
         <h3 className="text-xl font-semibold text-neutral-700">{pageName}</h3>
         <hr className="my-4" />
-        <div className="text-neutral-600">{pageSummary}h</div>
+        <div className="text-neutral-600">{pageSummary}</div>
       </div>
     </div>
   );
