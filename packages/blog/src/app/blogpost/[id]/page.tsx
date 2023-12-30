@@ -15,7 +15,7 @@ export default function Home() {
           <Navbar />
           <div className="flex flex-col items-center gap-y-6">
             <Link
-              href="/"
+              href="https://blog.atchyut.dev"
               className="text-neutral-700 hover:text-blue-500 flex flex-col items-center gap-2 transition-all duration-200"
             >
               <TiArrowBack className="text-xl " />{' '}

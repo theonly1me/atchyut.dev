@@ -14,6 +14,10 @@ const notion = new Client({
 const handler: Handler = async (event, context) => {
   const pageId = event.queryStringParameters?.pageId;
 
+  if (!pageId) {
+    return response(400, []);
+  }
+
   const { results } = await notion.blocks.children.list({
     block_id: pageId as string,
   });

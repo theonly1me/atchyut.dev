@@ -3,17 +3,15 @@ import React, { useState, useEffect, ReactElement } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Card from './components/Card';
-import notionJSX from 'notion-jsx';
 import _ from 'lodash';
 import { Page } from '@/types';
 import Spinner from './components/Spinner';
 
 export default function Home() {
-  const elements: ReactElement[] = [];
   const [blogs, setBlogs] = useState<Page[]>();
-  const [page, setPage] = useState<ReactElement[]>(elements);
 
   useEffect(() => {
+    console.log('USE EFFECT TRIGGERED');
     fetch('/api/fetchBlogs')
       .then(res => res.json())
       .then((d: Page[]) => {
@@ -28,20 +26,31 @@ export default function Home() {
           <Navbar />
           {(blogs && blogs.length && (
             <div className="flex flex-col items-center gap-y-8 p-12 pb-14">
-              {blogs.map(({ pageId, imageUrl, pageName, pageSummary }) => {
-                return (
-                  <Card
-                    key={pageId}
-                    pageId={pageId}
-                    pageName={pageName}
-                    pageSummary={pageSummary}
-                    imageUrl={imageUrl}
-                  />
-                );
-              })}
+              {blogs.map(
+                ({
+                  pageId,
+                  imageUrl,
+                  pageName,
+                  pageSummary,
+                  tags,
+                  publishedOn,
+                }) => {
+                  return (
+                    <Card
+                      key={pageId}
+                      pageId={pageId}
+                      pageName={pageName}
+                      pageSummary={pageSummary}
+                      imageUrl={imageUrl}
+                      tags={tags}
+                      publishedOn={publishedOn}
+                    />
+                  );
+                }
+              )}
             </div>
           )) || (
-            <div className="flex h-screen items-center justify-center">
+            <div className="flex justify-center">
               <Spinner />
             </div>
           )}

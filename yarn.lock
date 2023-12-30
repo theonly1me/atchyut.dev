@@ -34,8 +34,9 @@ __metadata:
     eslint-config-next: "npm:14.0.4"
     framer-motion: "npm:^10.16.16"
     lodash: "npm:^4.17.21"
+    moment: "npm:^2.30.1"
     next: "npm:14.0.4"
-    notion-jsx: "npm:^1.1.6"
+    notion-jsx: "npm:^1.2.0"
     postcss: "npm:^8"
     react: "npm:^18"
     react-dom: "npm:^18"
@@ -111,11 +112,11 @@ __metadata:
   linkType: hard
 
 "@babel/runtime@npm:^7.23.2":
-  version: 7.23.6
-  resolution: "@babel/runtime@npm:7.23.6"
+  version: 7.23.7
+  resolution: "@babel/runtime@npm:7.23.7"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
-  checksum: d886954e985ef8e421222f7a2848884d96a752e0020d3078b920dd104e672fdf23bcc6f51a44313a048796319f1ac9d09c2c88ec8cbb4e1f09174bcd3335b9ff
+  checksum: 3e304133ee55b0750e03e53cb4efb47fb2bdcdb5795f85bbffa10595196c34b9be60eb65bd6d833c87f49fc827f0365f86f95f51d85b188004d3128bb5129c93
   languageName: node
   linkType: hard
 
@@ -1721,9 +1722,9 @@ __metadata:
   linkType: hard
 
 "@opentelemetry/api@npm:^1.0.0, @opentelemetry/api@npm:^1.4.1":
-  version: 1.7.0
-  resolution: "@opentelemetry/api@npm:1.7.0"
-  checksum: b5468115d1cec45dd2b86b39210fdc03620a93b9f07c3d20b14081f75e2f7c9b37ceceeb60d5f35c6d4f9819ae07eee0b4874e53e7362376db21db1e00f483f8
+  version: 1.4.1
+  resolution: "@opentelemetry/api@npm:1.4.1"
+  checksum: 5ee641d3d64c91e87ee328fc22251fc70c809a3c744e51e595ca77c0bd3cad933b77a79beb4dac66b811e5068941cef9da58c1ec217c0748a01f598e08a7ae66
   languageName: node
   linkType: hard
 
@@ -2703,11 +2704,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0, @types/node@npm:^20":
-  version: 20.10.5
-  resolution: "@types/node@npm:20.10.5"
+  version: 20.10.6
+  resolution: "@types/node@npm:20.10.6"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: be30609aae0bfe492097815f166ccc07f465220cb604647fa4e5ec05a1d16c012a41b82b5f11ecfe2485cbb479d4d20384b95b809ca0bcff6d94d5bbafa645bb
+  checksum: 6692ccfa8552ef60c4069fda3c8de726c23e8d403cdf788e3c7efa769987e80fbda5f02723dd857f9de7df24a5fa40b3ed4580ec3c5cbac04eba44cf7b2ab1dc
   languageName: node
   linkType: hard
 
@@ -3635,6 +3636,7 @@ __metadata:
   resolution: "atchyut.dev@workspace:."
   dependencies:
     netlify-cli: "npm:^17.10.1"
+    react-share: "npm:^5.0.3"
   languageName: unknown
   linkType: soft
 
@@ -4259,6 +4261,13 @@ __metadata:
     isobject: "npm:^3.0.0"
     static-extend: "npm:^0.1.1"
   checksum: d44f4afc7a3e48dba4c2d3fada5f781a1adeeff371b875c3b578bc33815c6c29d5d06483c2abfd43a32d35b104b27b67bfa39c2e8a422fa858068bd756cfbd42
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.3.2":
+  version: 2.5.1
+  resolution: "classnames@npm:2.5.1"
+  checksum: afff4f77e62cea2d79c39962980bf316bacb0d7c49e13a21adaadb9221e1c6b9d3cdb829d8bb1b23c406f4e740507f37e1dcf506f7e3b7113d17c5bab787aa69
   languageName: node
   linkType: hard
 
@@ -4933,7 +4942,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:2.6.9, debug@npm:^2.2.0, debug@npm:^2.3.3":
+"debug@npm:2.6.9, debug@npm:^2.1.3, debug@npm:^2.2.0, debug@npm:^2.3.3":
   version: 2.6.9
   resolution: "debug@npm:2.6.9"
   dependencies:
@@ -6790,12 +6799,12 @@ __metadata:
   linkType: hard
 
 "follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.15.0":
-  version: 1.15.3
-  resolution: "follow-redirects@npm:1.15.3"
+  version: 1.15.4
+  resolution: "follow-redirects@npm:1.15.4"
   peerDependenciesMeta:
     debug:
       optional: true
-  checksum: 915a2cf22e667bdf47b1a43cc6b7dce14d95039e9bbf9a24d0e739abfbdfa00077dd43c86d4a7a19efefcc7a99af144920a175eedc3888d268af5df67c272ee5
+  checksum: 5f37ed9170c9eb19448c5418fdb0f2b73f644b5364834e70791a76ecc7db215246f9773bbef4852cfae4067764ffc852e047f744b661b0211532155b73556a6a
   languageName: node
   linkType: hard
 
@@ -8638,6 +8647,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jsonp@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "jsonp@npm:0.2.1"
+  dependencies:
+    debug: "npm:^2.1.3"
+  checksum: 744b828f50062cd691d70936c0ee796dc8cb1c78c96327c25c173ae8e2183b82295ec26a99fe3b092cc9b22e08c14a491bf8af639d576615798edbb50ab99f9b
+  languageName: node
+  linkType: hard
+
 "jsonpointer@npm:^5.0.0":
   version: 5.0.1
   resolution: "jsonpointer@npm:5.0.1"
@@ -9557,6 +9575,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"moment@npm:^2.30.1":
+  version: 2.30.1
+  resolution: "moment@npm:2.30.1"
+  checksum: 865e4279418c6de666fca7786607705fd0189d8a7b7624e2e56be99290ac846f90878a6f602e34b4e0455c549b85385b1baf9966845962b313699e7cb847543a
+  languageName: node
+  linkType: hard
+
 "move-file@npm:^3.0.0":
   version: 3.1.0
   resolution: "move-file@npm:3.1.0"
@@ -10165,16 +10190,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"notion-jsx@npm:^1.1.6":
-  version: 1.1.6
-  resolution: "notion-jsx@npm:1.1.6"
+"notion-jsx@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "notion-jsx@npm:1.2.0"
   dependencies:
     "@notionhq/client": "npm:^2.2.14"
     lodash: "npm:^4.17.21"
+    prismjs: "npm:^1.29.0"
     react: "npm:^18.2.0"
     react-icons: "npm:^4.12.0"
     uuid: "npm:^9.0.1"
-  checksum: 1a6ad32f813c977b4561e6f4d9b3f308ac0ffddac46beb2ec57eef85454a0ab3723fa2984c3423bbb2a5af7dc79957d32aa5bc754d244f5ac4743f3f210e02f5
+  checksum: a9fc9e367266283dae15e82ca2da691f29497fea56e9184377159f2ee4f4fc0eb810520ae9df36c233e6a5df75ab0e22afe3e3691583f522baa00e1f205f403d
   languageName: node
   linkType: hard
 
@@ -10991,12 +11017,12 @@ __metadata:
   linkType: hard
 
 "postcss-selector-parser@npm:^6.0.11":
-  version: 6.0.14
-  resolution: "postcss-selector-parser@npm:6.0.14"
+  version: 6.0.15
+  resolution: "postcss-selector-parser@npm:6.0.15"
   dependencies:
     cssesc: "npm:^3.0.0"
     util-deprecate: "npm:^1.0.2"
-  checksum: 3fd7d0d3346544ee0841c51c2447a4d39404fdc81e4cdebf2e9677f81c22ced293ca540ca821de18e17a3349058d8d40ff511cdc9e5a760e89a6a6e969d6863b
+  checksum: 48b425d6cef497bcf6b7d136f6fd95cfca43026955e07ec9290d3c15457de3a862dbf251dd36f42c07a0d5b5ab6f31e41acefeff02528995a989b955505e440b
   languageName: node
   linkType: hard
 
@@ -11129,6 +11155,13 @@ __metadata:
   bin:
     prettyjson: bin/prettyjson
   checksum: 94ea84205fc5103e32d562f515631c22440f7bcf4de5f5687522692e3f270bf4f450170857e098926adaec1b4ef33c9a8c97ae8911079a50fe7f584dd9ae5058
+  languageName: node
+  linkType: hard
+
+"prismjs@npm:^1.29.0":
+  version: 1.29.0
+  resolution: "prismjs@npm:1.29.0"
+  checksum: d906c4c4d01b446db549b4f57f72d5d7e6ccaca04ecc670fb85cea4d4b1acc1283e945a9cbc3d81819084a699b382f970e02f9d1378e14af9808d366d9ed7ec6
   languageName: node
   linkType: hard
 
@@ -11426,6 +11459,18 @@ __metadata:
   version: 17.0.2
   resolution: "react-is@npm:17.0.2"
   checksum: 2bdb6b93fbb1820b024b496042cce405c57e2f85e777c9aabd55f9b26d145408f9f74f5934676ffdc46f3dcff656d78413a6e43968e7b3f92eea35b3052e9053
+  languageName: node
+  linkType: hard
+
+"react-share@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "react-share@npm:5.0.3"
+  dependencies:
+    classnames: "npm:^2.3.2"
+    jsonp: "npm:^0.2.1"
+  peerDependencies:
+    react: ^17 || ^18
+  checksum: 80e2b31abca77d0f3167375eb55075d8e9a1488f8e47b07eeed5c53cb788b9d6f2055d0d127dbc347c71cd2464c5e4c787a702b8629e50b004de86580a19c191
   languageName: node
   linkType: hard
 
