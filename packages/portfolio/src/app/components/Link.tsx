@@ -1,3 +1,4 @@
+'use client';
 import React, { useState } from 'react';
 import Tooltip from './Tooltip';
 import Image, { StaticImageData } from 'next/image';
@@ -31,7 +32,7 @@ const Link: React.FC<{
           src={image}
           loading="eager"
           alt={`${text} logo`}
-          className="my-auto mx-auto max-w-52 max-h-42"
+          className="my-auto mx-auto max-w-80 max-h-42"
         />
       </Tooltip>
     </div>

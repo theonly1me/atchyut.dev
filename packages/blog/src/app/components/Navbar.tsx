@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { MdOutlinePersonPin } from 'react-icons/md';
 import { GrBlog } from 'react-icons/gr';
 import { RiHomeHeartLine } from 'react-icons/ri';
@@ -20,9 +21,11 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
 
   return (
     <nav className="py-10 flex flex-col justify-between items-center">
-      <h1 className="text-xl text-black border-b-2 border-white hover:border-black hover:from-purple-400 hover:to-pink-600 bg-gradient-to-r bg-clip-text hover:text-transparent cursor-pointer transition-all duration-200 mb-4 md:mb-2">
-        atchyut.dev
-      </h1>
+      <Link href="/">
+        <h1 className="text-xl text-black border-b-2 border-white hover:border-black hover:from-purple-400 hover:to-pink-600 bg-gradient-to-r bg-clip-text hover:text-transparent cursor-pointer transition-all duration-200 mb-4 md:mb-2">
+          atchyut.dev
+        </h1>
+      </Link>
       <ul className="flex flex-col items-center gap-2">
         <li>
           <Button

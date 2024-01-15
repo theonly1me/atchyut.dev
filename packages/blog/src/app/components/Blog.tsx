@@ -1,80 +1,47 @@
-import React, { ReactElement, useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import notionJSX from 'notion-jsx';
-import Spinner from './Spinner';
-import {
-  FacebookShareButton,
-  RedditShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from 'react-share';
-import { FaFacebook, FaLinkedin, FaReddit, FaWhatsapp } from 'react-icons/fa6';
-import { FaSquareXTwitter } from 'react-icons/fa6';
+import { Client } from '@notionhq/client';
+import { BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import Blocks from './Blocks';
+import ShareBlog from './ShareBlog';
+import moment from 'moment';
 
-const Blog = () => {
-  const [blocks, setBlocks] = useState<ReactElement[]>();
+export const revalidate = 600;
 
-  const pathname = usePathname();
+export default async function Blog({
+  pageId,
+  title,
+  publishedOn,
+  imageUrl,
+}: Readonly<{
+  pageId: string;
+  title: string;
+  publishedOn: string;
+  imageUrl: string;
+}>) {
+  const blogURL = 'https://blog.atchyut.dev/blogpost/' + pageId;
 
-  const pageId = pathname.split('/')[2];
+  const { NOTION_KEY } = process.env;
 
-  useEffect(() => {
-    fetch(`/api/fetchPage?pageId=${pageId}`)
-      .then(res => {
-        if (res.status === 200) {
-          return res.json();
-        }
+  const notion = new Client({
+    auth: NOTION_KEY as string,
+  });
 
-        throw new Error('Something went wrong! Please try again.');
-      })
-      .then(d => {
-        if (d.length) {
-          setBlocks(notionJSX.generateJSX(d) as ReactElement[]);
-        }
-      });
-  }, [pageId]);
-
-  if (!blocks || !blocks.length) {
-    return (
-      <div>
-        <Spinner />
-      </div>
-    );
-  }
-
-  const blogURL = window.location.href;
+  const { results } = await notion.blocks.children.list({
+    block_id: pageId,
+  });
 
   return (
     <div className="p-10 font-normal">
-      <div className="flex gap-1">
-        <span className="text-neutral-500">Share this blog: </span>
-        <TwitterShareButton url={blogURL}>
-          <FaSquareXTwitter className="text-black text-2xl" />
-        </TwitterShareButton>
-        <FacebookShareButton url={blogURL}>
-          {' '}
-          <FaFacebook className="text-blue-600 text-2xl" />
-        </FacebookShareButton>
-        <RedditShareButton url={blogURL}>
-          <FaReddit className="text-2xl text-orange-600" />
-        </RedditShareButton>
-        <WhatsappShareButton url={blogURL}>
-          <FaWhatsapp className="text-2xl text-green-400" />
-        </WhatsappShareButton>
+      <div className="flex flex-col justify-between">
+        <ShareBlog blogURL={blogURL} title={title} imageUrl={imageUrl} />
+        {publishedOn && (
+          <span className="text-neutral-500 text-sm">
+            Published on {moment(publishedOn).format('dddd, MMMM Do YYYY')}
+          </span>
+        )}
       </div>
-      {blocks?.map((element: ReactElement, index: number) => {
-        return React.createElement(
-          element.type,
-          {
-            key: element.key || index,
-            className: element.props.className,
-            ...element.props,
-          },
-          element.props.children
-        );
-      })}
+      {Array.isArray(results) && (
+        <Blocks blocks={results as BlockObjectResponse[]} />
+      )}
     </div>
   );
-};
-
-export default Blog;
+}

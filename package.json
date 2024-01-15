@@ -12,11 +12,13 @@
     "web": "yarn workspace @atchyut.dev/portfolio dev",
     "web:build": "yarn workspace @atchyut.dev/portfolio build",
     "web:start": "yarn workspace @atchyut.dev/portfolio start",
+    "web:dev": "yarn workspace @atchyut.dev/portfolio dev",
     "web:lint": "yarn workspace @atchyut.dev/portfolio lint",
     "web:test": "yarn workspace @atchyut.dev/portfolio test",
     "blog": "yarn workspace @atchyut.dev/blog dev",
     "blog:build": "yarn workspace @atchyut.dev/blog build",
     "blog:start": "yarn workspace @atchyut.dev/blog start",
+    "blog:dev": "yarn workspace @atchyut.dev/blog dev",
     "blog:lint": "yarn workspace @atchyut.dev/blog lint",
     "blog:test": "yarn workspace @atchyut.dev/blog test",
     "clean": "rm -rf node_modules"

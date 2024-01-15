@@ -1,28 +1,25 @@
-'use client';
-
 import genpact from '../../public/genpact.png';
 import postman from '../../public/postman.png';
 import auditLogs from '../../public/audit-logs.jpg';
 import secretScanner from '../../public/secret-scanner.jpg';
+import postmanVault from '../../public/postman-vault.png';
 import sap from '../../public/sap.png';
 import apm from '../../public/apm.png';
 import godfather from '../../public/godfather.webp';
 
 import Link from './components/Link';
 import Carousel from './components/Carousel';
-import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 export default function Home() {
   return (
     <div className="bg-white">
-      <main className="bg-white px-10">
-        <section className="min-h-screen">
-          <Navbar origin="home" />
+      <main className="px-10 flex flex-col items-center my-10">
+        <section className="min-h-screen max-w-4xl">
           <div className="flex flex-col items-center gap-y-4">
             <Carousel />
             <div className="p-10 font-normal">
-              <h2 className="text-4xl md:text-5xl text-neutral-900 font-bold  pb-2 ">
+              <h2 className="text-4xl md:text-5xl text-neutral-900 font-bold pb-2">
                 Hey there <span className="wave">👋🏼</span>, I&apos;m{' '}
                 <span className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
                   Atchyut
@@ -48,26 +45,43 @@ export default function Home() {
                   href="https://go.pstmn.io/secret-scanner"
                   image={secretScanner}
                   tooltipPlacement="bottom"
-                />
-                ,{' '}
+                />{' '}
+                (previously Token Scanner), which scans various Postman entities
+                such as collections, environments for leaked secrets, api keys
+                and other sensitive data. I&apos;ve owned the Secret Scanner
+                initiative and added several core features for users including
+                the Postman Enterprise customers including the Secret Scanner
+                public APIs as well as the unified dashboard to find all the
+                secrets leaked within by users of an organization. I&apos;ve
+                also scaled the microservice from serving around 200 requests
+                per minute to handle throughputs upto 120,000 requests per
+                minute in order to effectively scan all the realtime user events
+                that happen on Postman with its 30 million strong userbase.
+              </p>
+              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
+                More recently, I&apos;ve built the{' '}
+                <Link
+                  text="Postman Vault"
+                  href="https://go.pstmn.io/vault"
+                  image={postmanVault}
+                  tooltipPlacement="bottom"
+                />{' '}
+                which is a secure local storage for users to store and use their
+                secrets without having to ever sync them to the Postman cloud.
+                In addition to this I&apos;ve also contributed to other features
+                within Postman such as the{' '}
                 <Link
                   image={auditLogs}
                   text="Audit Logs"
                   href="https://learning.postman.com/docs/administration/managing-your-team/audit-logs/"
                   tooltipPlacement="bottom"
                 />{' '}
-                and more. I&apos;ve primarily owned the Secret Scanner, added
-                several core features for users including the Postman Enterprise
-                customers and scaled the microservice from around 200 requests
-                per minute (rpm) to handle throughputs upto 80,000 requests per
-                minute (rpm) in order to effectively scan all the realtime user
-                events that happen on Postman with its 30 million strong
-                userbase. I&apos;ve also had the opportunity to work very
+                and more. I&apos;ve also had the opportunity to work very
                 closely with several Postman Enterprise customers to enhance our
                 features that enable them to secure their API workflows.
               </p>
               <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
-                Prior to that, up until July 2022, I was employed at{' '}
+                Prior to that, I was employed at{' '}
                 <Link
                   text="SAP"
                   href="https://www.sap.com"
@@ -83,10 +97,11 @@ export default function Home() {
                 />{' '}
                 which is a vanguard product from the SAP&apos;s Intelligent
                 Asset Management portfolio. I was the primary engineer for
-                several microservices including the IoT synchronization engine,
-                Alerting service that APM uses. Additionally, I&apos;ve worked
-                with several customers to unblock them when they experienced
-                issues with APM&apos;s predecessor, Performance Asset Insights.
+                several microservices including the IoT Onboarding engine,
+                Alerting service that APM to onboard devices and alert customers
+                respectively. Additionally, I&apos;ve worked with several
+                customers to help resolve issues that they experienced with
+                APM&apos;s predecessor, Performance Asset Insights.
               </p>
               <p className="text-md py-3 leading-8 md:text-justify text-neutral-700 max-w-4xl">
                 Going back to the beginning, I embarked on my coding journey
@@ -134,7 +149,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

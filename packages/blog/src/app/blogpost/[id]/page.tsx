@@ -1,33 +1,35 @@
-'use client';
-import React from 'react';
-import Navbar from '../../components/Navbar';
-import Footer from '../../components/Footer';
-import _ from 'lodash';
 import Blog from '@/app/components/Blog';
 import { TiArrowBack } from 'react-icons/ti';
 import Link from 'next/link';
+import { BlogpostProps } from '@/types';
 
-export default function Home() {
+export default function Home({
+  params,
+  searchParams,
+}: Readonly<BlogpostProps>) {
   return (
     <div className="bg-white">
-      <main className="bg-white px-10">
-        <section className="min-h-screen">
-          <Navbar />
+      <main className="px-10 flex flex-col items-center my-10">
+        <section className="min-h-screen max-w-4xl">
           <div className="flex flex-col items-center gap-y-6">
             <Link
-              href="https://blog.atchyut.dev"
+              href="/"
               className="text-neutral-700 hover:text-blue-500 flex flex-col items-center gap-2 transition-all duration-200"
             >
               <TiArrowBack className="text-xl " />{' '}
               <span className="hover:underline">Back to all blogs</span>
             </Link>
             <div className="flex flex-col items-center gap-y-12">
-              <Blog />
+              <Blog
+                pageId={params.id}
+                title={searchParams?.title}
+                publishedOn={searchParams.publishedOn}
+                imageUrl={searchParams.imageUrl}
+              />
             </div>
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   );
 }

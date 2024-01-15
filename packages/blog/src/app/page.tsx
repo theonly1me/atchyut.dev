@@ -1,31 +1,51 @@
-'use client';
-import React, { useState, useEffect, ReactElement } from 'react';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import Card from './components/Card';
-import _ from 'lodash';
 import { Page } from '@/types';
+import { Client } from '@notionhq/client';
+import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints';
+import _ from 'lodash';
 import Spinner from './components/Spinner';
 
-export default function Home() {
-  const [blogs, setBlogs] = useState<Page[]>();
+export default async function Home() {
+  const { NOTION_KEY, NOTION_DB } = process.env;
 
-  useEffect(() => {
-    console.log('USE EFFECT TRIGGERED');
-    fetch('/api/fetchBlogs')
-      .then(res => res.json())
-      .then((d: Page[]) => {
-        setBlogs(d);
-      });
-  }, []);
+  const notion = new Client({
+    auth: NOTION_KEY as string,
+  });
+
+  const { results }: QueryDatabaseResponse = await notion.databases.query({
+    database_id: NOTION_DB as string,
+    filter: {
+      property: 'status',
+      status: {
+        equals: 'Live',
+      },
+    },
+  });
+
+  const blogs = results.map((result): Page => {
+    return {
+      pageId: _.get(result, ['properties', 'pageId', 'rich_text'])[0]
+        ?.plain_text,
+      imageUrl: _.get(result, ['properties', 'imageUrl', 'url']),
+      pageName: _.get(result, ['properties', 'name', 'title'])[0]?.plain_text,
+      tags: _.get(result, ['properties', 'tags', 'rich_text'])[0]?.plain_text,
+      publishedOn: _.get(result, [
+        'properties',
+        'publishedOn',
+        'date',
+        'start',
+      ]),
+      pageSummary: _.get(result, ['properties', 'pageSummary', 'rich_text'])[0]
+        ?.plain_text,
+    };
+  });
 
   return (
     <div className="bg-white">
-      <main className="bg-white px-10">
-        <section className="min-h-screen">
-          <Navbar />
-          {(blogs && blogs.length && (
-            <div className="flex flex-col items-center gap-y-8 p-12 pb-14">
+      <main className="bg-white px-10 flex flex-col items-center my-10">
+        <section className="min-h-screen max-w-4xl">
+          {(blogs?.length && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-12">
               {blogs.map(
                 ({
                   pageId,
@@ -56,7 +76,6 @@ export default function Home() {
           )}
         </section>
       </main>
-      <Footer />
     </div>
   );
 }
