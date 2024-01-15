@@ -15,6 +15,7 @@ export default function Home({
             <Link
               href="/"
               className="text-neutral-700 hover:text-blue-500 flex flex-col items-center gap-2 transition-all duration-200"
+              shallow
             >
               <TiArrowBack className="text-xl " />{' '}
               <span className="hover:underline">Back to all blogs</span>
