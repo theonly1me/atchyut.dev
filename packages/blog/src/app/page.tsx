@@ -5,6 +5,8 @@ import { QueryDatabaseResponse } from '@notionhq/client/build/src/api-endpoints'
 import _ from 'lodash';
 import Spinner from './components/Spinner';
 
+export const revalidate = 3600;
+
 export default async function Home() {
   const { NOTION_KEY, NOTION_DB } = process.env;
 
