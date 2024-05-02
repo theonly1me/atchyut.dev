@@ -31,7 +31,7 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
           <Button
             headingOffset="5%"
             heading="Grab My Résumé"
-            href="https://www.icloud.com/iclouddrive/0cb1xJia0vNIPXnDY7e6eGG-A#Atchyut%5FResume"
+            href="https://drive.google.com/file/d/1PmiRUMLyA38sMP1GAfNTkT97a5zdoBjP/view?usp=share_link"
           >
             <MdOutlinePersonPin className="text-xl text-purple-300" />
           </Button>
