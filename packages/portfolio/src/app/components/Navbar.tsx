@@ -31,7 +31,7 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
           <Button
             headingOffset="5%"
             heading="Grab My Résumé"
-            href="https://drive.google.com/file/d/1PmiRUMLyA38sMP1GAfNTkT97a5zdoBjP/view?usp=share_link"
+            href="https://drive.google.com/file/d/1Kr7MmTc3FAN7a-2xV_pttmjiFoRAAFon/view"
           >
             <MdOutlinePersonPin className="text-xl text-purple-300" />
           </Button>
