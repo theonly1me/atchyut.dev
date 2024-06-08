@@ -1,4 +1,4 @@
-import { MdOutlinePersonPin } from 'react-icons/md';
+import { MdOutlinePersonPin, MdCalendarMonth } from 'react-icons/md';
 import { GrBlog } from 'react-icons/gr';
 import { RiHomeHeartLine } from 'react-icons/ri';
 import Link from 'next/link';
@@ -30,7 +30,7 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
         <li>
           <Button
             headingOffset="5%"
-            heading="Grab My Résumé"
+            heading="View My Résumé"
             href="https://drive.google.com/file/d/1Kr7MmTc3FAN7a-2xV_pttmjiFoRAAFon/view"
           >
             <MdOutlinePersonPin className="text-xl text-purple-300" />
@@ -47,6 +47,15 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
             ) : (
               <RiHomeHeartLine className="text-xl text-purple-300" />
             )}
+          </Button>
+        </li>
+        <li>
+          <Button
+            headingOffset="5%"
+            heading="Reserve My Time"
+            href="https://cal.com/atchyut"
+          >
+            <MdCalendarMonth className="text-xl text-purple-300" />
           </Button>
         </li>
       </ul>

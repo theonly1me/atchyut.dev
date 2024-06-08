@@ -6,7 +6,7 @@ import Image, { StaticImageData } from 'next/image';
 const Link: React.FC<{
   href?: string;
   text: string;
-  image: StaticImageData;
+  image?: StaticImageData;
   tooltipPlacement: string;
 }> = ({ href, text, image, tooltipPlacement }) => {
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
@@ -21,20 +21,22 @@ const Link: React.FC<{
       >
         {text}
       </a>
-      <Tooltip
-        isVisible={isTooltipVisible}
-        className={`max-w-62 max-h-42 ${
-          isTooltipVisible ? 'sm:block sm:absolute sm:z-50' : ''
-        }`}
-        placement={tooltipPlacement}
-      >
-        <Image
-          src={image}
-          loading="eager"
-          alt={`${text} logo`}
-          className="my-auto mx-auto max-w-80 max-h-42"
-        />
-      </Tooltip>
+      {image && (
+        <Tooltip
+          isVisible={isTooltipVisible}
+          className={`max-w-62 max-h-42 ${
+            isTooltipVisible ? 'sm:block sm:absolute sm:z-50' : ''
+          }`}
+          placement={tooltipPlacement}
+        >
+          <Image
+            src={image}
+            loading="eager"
+            alt={`${text} logo`}
+            className="my-auto mx-auto max-w-80 max-h-42"
+          />
+        </Tooltip>
+      )}
     </div>
   );
 };

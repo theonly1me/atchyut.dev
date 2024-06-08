@@ -1,6 +1,4 @@
-import genpact from '../../public/genpact.png';
 import postman from '../../public/postman.png';
-import auditLogs from '../../public/audit-logs.jpg';
 import secretScanner from '../../public/secret-scanner.jpg';
 import postmanVault from '../../public/postman-vault.png';
 import sap from '../../public/sap.png';
@@ -9,12 +7,11 @@ import godfather from '../../public/godfather.webp';
 
 import Link from './components/Link';
 import Carousel from './components/Carousel';
-import Footer from './components/Footer';
 
 export default function Home() {
   return (
     <div className="bg-white">
-      <main className="px-10 flex flex-col items-center my-10">
+      <main className="px-10 flex flex-col items-center">
         <section className="min-h-screen max-w-4xl">
           <div className="flex flex-col items-center gap-y-4">
             <Carousel />
@@ -27,39 +24,50 @@ export default function Home() {
                 <span className="text-purple-400">.</span>
               </h2>
               <h3 className="text-xl py-2 text-neutral-800 max-w-3xl">
-                A fullstack software engineer with over{' '}
-                {new Date().getFullYear() - 2017} years of experience building
-                cloud-ready, scalable software systems.
+                A senior fullstack engineer and technical lead with expertise in
+                architecting scalable software systems and leading high-impact
+                engineering teams
               </h3>
               <p className="text-md md:text-justify py-3 leading-8 text-neutral-700 max-w-4xl">
-                I currently work at{' '}
+                Welcome to my website and thanks for visiting! This is probably
+                my largest personal slices of the internet (and my favourite one
+                too)! Since you are here, I&apos;d like to take a quick moment
+                to introduce myself, my skills and how I may be useful to you in
+                your SaaS, start up or computer science learning journey.
+                I&apos;ve been coding for about 10 years now and been a software
+                engineer for over {new Date().getFullYear() - 2017}. It has been
+                quite a wonderful journey so far and I have picked up a ton of
+                knowledge and skills along the way and if you are interested in
+                learning more about my exact skillset you can{' '}
+                <Link
+                  text="view my up to date résumé"
+                  href="https://drive.google.com/file/d/1Kr7MmTc3FAN7a-2xV_pttmjiFoRAAFon/view"
+                  tooltipPlacement="bottom"
+                />
+                .
+              </p>
+              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
+                I currently work as a senior engineer and technical lead at{' '}
                 <Link
                   image={postman}
-                  text="Postman Inc."
+                  text="Postman"
                   href="https://www.postman.com"
                   tooltipPlacement="bottom"
                 />
-                , where I contribute to exciting endeavors such as the{' '}
+                , the world&apos;s leading API platform with over 30 million
+                users. Here, I&apos;ve had the opportunity to sovle some really
+                interesting challenges and build features that are critical in
+                enabling our users to build and test their APIs securely. One of
+                such features is the{' '}
                 <Link
-                  text="Secret Scanner"
+                  text="Postman Secret Scanner"
                   href="https://go.pstmn.io/secret-scanner"
                   image={secretScanner}
                   tooltipPlacement="bottom"
-                />{' '}
-                (previously Token Scanner), which scans various Postman entities
-                such as collections, environments for leaked secrets, api keys
-                and other sensitive data. I&apos;ve owned the Secret Scanner
-                initiative and added several core features for users including
-                the Postman Enterprise customers including the Secret Scanner
-                public APIs as well as the unified dashboard to find all the
-                secrets leaked within by users of an organization. I&apos;ve
-                also scaled the microservice from serving around 200 requests
-                per minute to handle throughputs upto 120,000 requests per
-                minute in order to effectively scan all the realtime user events
-                that happen on Postman with its 30 million strong userbase.
-              </p>
-              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
-                More recently, I&apos;ve built the{' '}
+                />
+                , which detects leaked secrets, api keys and other sensitive
+                data across Postman, helps users remove & revoke these serets
+                and protect themselves. More recently, I&apos;ve architected the{' '}
                 <Link
                   text="Postman Vault"
                   href="https://go.pstmn.io/vault"
@@ -67,21 +75,13 @@ export default function Home() {
                   tooltipPlacement="bottom"
                 />{' '}
                 which is a secure local storage for users to store and use their
-                secrets without having to ever sync them to the Postman cloud.
-                In addition to this I&apos;ve also contributed to other features
-                within Postman such as the{' '}
-                <Link
-                  image={auditLogs}
-                  text="Audit Logs"
-                  href="https://learning.postman.com/docs/administration/managing-your-team/audit-logs/"
-                  tooltipPlacement="bottom"
-                />{' '}
-                and more. I&apos;ve also had the opportunity to work very
-                closely with several Postman Enterprise customers to enhance our
-                features that enable them to secure their API workflows.
-              </p>
-              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
-                Prior to that, I was employed at{' '}
+                secrets, it also allows users to fetch secrets from their other
+                vaults such as the Azure Key Vault, HashiCorp Vault at runtime
+                to use their secrets while working with their APIs. In addition
+                to these, I have also worked in developing several other
+                features that all integrate together seamlessly to provide our
+                users with an intuitive and secure experience while using
+                Postman. Prior to that, I was employed at{' '}
                 <Link
                   text="SAP"
                   href="https://www.sap.com"
@@ -96,54 +96,68 @@ export default function Home() {
                   tooltipPlacement="bottom"
                 />{' '}
                 which is a vanguard product from the SAP&apos;s Intelligent
-                Asset Management portfolio. I was the primary engineer for
-                several microservices including the IoT Onboarding engine,
-                Alerting service that APM to onboard devices and alert customers
-                respectively. Additionally, I&apos;ve worked with several
-                customers to help resolve issues that they experienced with
-                APM&apos;s predecessor, Performance Asset Insights.
+                Asset Management portfolio.
               </p>
+
               <p className="text-md py-3 leading-8 md:text-justify text-neutral-700 max-w-4xl">
-                Going back to the beginning, I embarked on my coding journey
-                back in 2014, when I was still in college, it all started with
-                Python and JavaScript, but I&apos;ve worked with a multitude of
-                languages and technologies since. In 2017, I started working at{' '}
-                <Link
-                  href="https://www.genpact.com"
-                  text="Genpact"
-                  image={genpact}
-                  tooltipPlacement="bottom"
-                />
-                . Over the next 4 years, I&apos;ve collaborated with diverse
-                Fortune 500 clients in building their products using various
-                technologies.
+                Getting back to the subject, here are some ways I can be of help
+                to you:
+                <ul className="ml-8 text-left">
+                  <li className="list-decimal">
+                    I&apos;m always looking to work on challenging projects, so
+                    if you have a technical problem that needs solving, you
+                    could hire me as a technical advisor or as a a part-time
+                    contractor / full-time employee.
+                  </li>
+                  <li className="list-decimal">
+                    I write a{' '}
+                    <Link
+                      text="blog"
+                      href="https://blog.atchyut.dev"
+                      tooltipPlacement="bottom"
+                    />{' '}
+                    where I discuss the challenges I&apos;ve solved, my
+                    interests in technology and about programming and computer
+                    science in general, so if you&apos;re a fellow software
+                    engineer or a student or someone who&apos;s just learning to
+                    code, feel free to check it out, I&apos;m sure you&apos;ll
+                    learn something new.
+                  </li>
+                  <li className="list-decimal">
+                    If you are looking for advise in tech, your career as a
+                    software engineer or just looking to pick my brain, feel
+                    free to{' '}
+                    <Link
+                      text="schedule a meeting"
+                      tooltipPlacement="bottom"
+                      href="https://cal.com/atchyut"
+                    />{' '}
+                    with me.
+                  </li>
+                </ul>
               </p>
-              <p className="text-md py-3 leading-8 md:text-justify text-neutral-700 max-w-4xl">
-                Apart from this, I&apos;m a father and also a dog father (yes,
-                you read it right... I didn&apos;t mistype{' '}
+              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
+                Now, before you go back to your busy day, I also want to add a
+                personal touch by talking about my life and interests. I&apos;m
+                a father, dog father (yes, you read it right... I didn&apos;t
+                mistype{' '}
                 <Link
                   text="Godfather"
                   tooltipPlacement="bottom"
                   image={godfather}
                   href="https://en.wikipedia.org/wiki/The_Godfather"
                 />
-                ), a husband and lastly a lifelong gamer. To reach me, you can
-                mail me at{' '}
-                <a
-                  href="mailto:pulavarthi.preetham@gmail.com"
-                  className="underline transition-colors duration-300 hover:text-blue-500"
-                >
-                  pulavarthi.preetham@gmail.com
-                </a>{' '}
-                or{' '}
+                ), a husband and also a passionate gamer. I sometimes read books
+                (and listen to audiobooks) too, mostly computer science related.
+                You can mail me at{' '}
                 <a
                   href="mailto:hello@atchyut.dev"
                   className="underline transition-colors duration-300 hover:text-blue-500"
                 >
                   hello@atchyut.dev
                 </a>
-                . You can also reach out to me on any of the social media
-                platforms listed below.
+                . You can also follow me or reach out to me on any of the social
+                media platforms by clicking the respective icons below.
               </p>
             </div>
           </div>
