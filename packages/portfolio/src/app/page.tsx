@@ -30,7 +30,7 @@ export default function Home() {
               </h3>
               <p className="text-md md:text-justify py-3 leading-8 text-neutral-700 max-w-4xl">
                 Welcome to my website and thanks for visiting! This is probably
-                my largest personal slices of the internet (and my favourite one
+                my largest personal slice of the internet (and my favourite one
                 too)! Since you are here, I&apos;d like to take a quick moment
                 to introduce myself, my skills and how I may be useful to you in
                 your SaaS, start up or computer science learning journey.
