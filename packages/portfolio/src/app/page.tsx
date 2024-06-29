@@ -7,6 +7,7 @@ import godfather from '../../public/godfather.webp';
 
 import Link from './components/Link';
 import Carousel from './components/Carousel';
+import Reviews from './components/Reviews';
 
 export default function Home() {
   return (
@@ -159,6 +160,7 @@ export default function Home() {
                 . You can also follow me or reach out to me on any of the social
                 media platforms by clicking the respective icons below.
               </p>
+              <Reviews />
             </div>
           </div>
         </section>
