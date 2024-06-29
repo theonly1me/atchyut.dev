@@ -160,9 +160,9 @@ export default function Home() {
                 . You can also follow me or reach out to me on any of the social
                 media platforms by clicking the respective icons below.
               </p>
-              <Reviews />
             </div>
           </div>
+          <Reviews />
         </section>
       </main>
     </div>
