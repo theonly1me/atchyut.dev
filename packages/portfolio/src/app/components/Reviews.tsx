@@ -2,7 +2,7 @@ import Link from './Link';
 
 const Reviews = () => {
   return (
-    <div className="flex flex-col items-center max-w-3xl sm:max-w-4xl">
+    <div className="flex flex-col items-center mb-10 max-w-3xl sm:max-w-4xl">
       <p className="text-lg py-3 mx-10 md:text-justify leading-8 text-neutral-700 max-w-4xl self-start font-semibold">
         Here&apos;s what my{' '}
         <Link

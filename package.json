@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "netlify-cli": "^17.10.1"
+  },
+  "dependencies": {
+    "@calcom/embed-react": "^1.5.0"
   }
 }

@@ -1,9 +1,10 @@
-import { MdOutlinePersonPin, MdCalendarMonth } from 'react-icons/md';
+import { MdOutlinePersonPin } from 'react-icons/md';
 import { GrBlog } from 'react-icons/gr';
 import { RiHomeHeartLine } from 'react-icons/ri';
 import Link from 'next/link';
 
 import Button from './Button';
+import Calendar from './Calendar';
 
 const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
   let secondaryBtnHeading,
@@ -49,16 +50,8 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
             )}
           </Button>
         </li>
-        <li>
-          <Button
-            headingOffset="5%"
-            heading="Reserve My Time"
-            href="https://cal.com/atchyut"
-          >
-            <MdCalendarMonth className="text-xl text-purple-300" />
-          </Button>
-        </li>
       </ul>
+      {/* <Calendar /> */}
     </nav>
   );
 };
