@@ -4,7 +4,6 @@ import { RiHomeHeartLine } from 'react-icons/ri';
 import Link from 'next/link';
 
 import Button from './Button';
-import Calendar from './Calendar';
 
 const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
   let secondaryBtnHeading,
@@ -51,7 +50,6 @@ const Navbar: React.FC<{ origin?: string }> = ({ origin }) => {
           </Button>
         </li>
       </ul>
-      {/* <Calendar /> */}
     </nav>
   );
 };
