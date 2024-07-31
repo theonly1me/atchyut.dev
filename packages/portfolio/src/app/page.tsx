@@ -29,7 +29,7 @@ export default function Home() {
                 architecting scalable software systems and leading high-impact
                 engineering teams
               </h3>
-              <p className="text-md md:text-justify py-3 leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
                 Welcome to my website and thanks for visiting! This is probably
                 my largest personal slice of the internet (and my favourite one
                 too)! Since you are here, I&apos;d like to take a quick moment
@@ -47,7 +47,7 @@ export default function Home() {
                 />
                 .
               </p>
-              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
                 I currently work as a senior engineer and technical lead at{' '}
                 <Link
                   image={postman}
@@ -100,7 +100,7 @@ export default function Home() {
                 Asset Management portfolio.
               </p>
 
-              <p className="text-md py-3 leading-8 md:text-justify text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
                 Getting back to the subject, here are some ways I can be of help
                 to you:
                 <ul className="ml-8 text-left">
@@ -137,7 +137,7 @@ export default function Home() {
                   </li>
                 </ul>
               </p>
-              <p className="text-md py-3 md:text-justify leading-8 text-neutral-700 max-w-4xl">
+              <p className="text-md py-3 leading-8 text-neutral-700 max-w-4xl">
                 Now, before you go back to your busy day, I also want to add a
                 personal touch by talking about my life and interests. I&apos;m
                 a father, dog father (yes, you read it right... I didn&apos;t
