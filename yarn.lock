@@ -198,35 +198,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@calcom/embed-core@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@calcom/embed-core@npm:1.5.0"
-  checksum: 10c0/cdbcead7f1fe180a6069e8da36ff5daa0132396b8ac15e37d15605f175e70a75fddfe03cdeae6d57b94b1ca465f4b027202506d7df7bf6c3140827ca40a836b8
-  languageName: node
-  linkType: hard
-
-"@calcom/embed-react@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "@calcom/embed-react@npm:1.5.0"
-  dependencies:
-    "@calcom/embed-core": "npm:1.5.0"
-    "@calcom/embed-snippet": "npm:1.3.0"
-  peerDependencies:
-    react: ^18.2.0
-    react-dom: ^18.2.0
-  checksum: 10c0/6b30586b776e29709dccd8e300d6445a35f7503c482012b2acfd01e6ff9e7fba070b94be248da29c82c50fe91ecb8e12b5bc1da2310c2fe6d70ccfee1c406ce6
-  languageName: node
-  linkType: hard
-
-"@calcom/embed-snippet@npm:1.3.0":
-  version: 1.3.0
-  resolution: "@calcom/embed-snippet@npm:1.3.0"
-  dependencies:
-    "@calcom/embed-core": "npm:1.5.0"
-  checksum: 10c0/f860814285e2448e825020fc74d4507846ce3339fe5c1359ef0b1424018b0ffdcc86d4bbeb0dd98939544ac94324bf9de06dc18a96ef38052c271a9212f1979a
-  languageName: node
-  linkType: hard
-
 "@colors/colors@npm:1.6.0, @colors/colors@npm:^1.6.0":
   version: 1.6.0
   resolution: "@colors/colors@npm:1.6.0"
@@ -2929,7 +2900,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "atchyut.dev@workspace:."
   dependencies:
-    "@calcom/embed-react": "npm:^1.5.0"
     netlify-cli: "npm:^17.10.1"
   languageName: unknown
   linkType: soft
